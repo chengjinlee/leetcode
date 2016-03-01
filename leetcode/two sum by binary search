@@ -1,0 +1,30 @@
+#codeing Utf-8
+class Solution(object):
+    def twoSum(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+        """
+        num=sorted(nums)
+        n=len(nums)
+        l=0
+        r=n-1
+        index=[]
+        while l<r:
+            sums=num[l]+num[r]
+            if sums==target:
+                for i in range(n):
+                    if nums[i]== num[l]:
+                        index.append(i)
+                    elif nums[i] == num[r]:
+                        index.append(i)
+                    if len(index)==2:
+                        break
+                break
+            elif sums>target:
+                r -=1
+            else:
+                l +=1
+        result =tuple(index)
+        return result
