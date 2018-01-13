@@ -1,4 +1,3 @@
-# leetcode-solution-python
+# leetcode-python
 
-leetcode-solutions
 My Solutions of LeetCode
